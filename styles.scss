@@ -1,0 +1,81 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+body, .bg-dark, .badge-dark, .bg-light, .card {
+  background-color: #242c4c!important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.border-right {
+  border: none !important;
+}
+
+.badge-dark {
+  transition: all ease-in .2s;
+}
+.badge-dark:hover {
+  background-color: #3d446c!important;
+}
+
+.btn-dark.disabled, .btn-dark:disabled, .btn-dark, .badge-secondary {
+  color: white !important;
+  background-color: #f35565!important;
+}
+
+.card {
+  border: 1px solid white !important;
+}
+
+a:not([href]), a:not([href]):hover {
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.badge-primary {
+  background-color: #f35565!important;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $primary;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
